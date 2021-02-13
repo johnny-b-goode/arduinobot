@@ -57,7 +57,7 @@ Follow these steps to assemble the robot:
 5. Tin the stripped ends of the 22 gauge wires
 6. Solder the 1/8" ends of the four 22 gauge wires to the motors in the Twin-Motor Gear Box
 7. Solder the 90° male headers (included) to the 5v regulator
-8. Solder the male headers (included) to the motor controller
+8. Solder the male headers (included) to the motor controller with the labels facing down (so that the actual chip, solder pads, and passives will be "facing up" when the controller is installed on the breadboard)
 9. Insert the Twin-Motor Gear Box into the rear of the chassis from the bottom. The tabs on the gearbox should be flat against the bottom of the chassis. Note that the "trestles" that the wheels mount to will need to be slightly flexed outward to install the gearbox. This should be done carefully to prevent breaking the chassis.
 10. Insert two of the longer screws through the countersunk holes in the rear of the body, through the matching holes in the chassis, and through the tabs in the Twin-Motor Gear Box. Install the hex nuts onto the screws, but do not tighten.
 11. Inert the hex shafts through the holes in the chassis and into the Twin-Motor Gear Box.
@@ -74,7 +74,7 @@ Follow these steps to assemble the robot:
 
 ![breadboard](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/rsrc/breadboard.jpg)
 
-22. Remove the adhesive backing from the breadboard and adhere to the body, lining up the back of the breadboard with the back of the body.
+22. Remove the adhesive backing from the breadboard and adhere to the body, lining up the back of the breadboard (the side with the USB port of the Arduino) with the back of the body.
 23. Connect the leads from the battery holders to the breadboard in series supplying 6v to the left-hand rail of the breadboard (supplying the 5v regulator). Note the "short" red and black leads (in I30, J30, and power rail) in the image above.
 24. Connect the leads from the motors to the breadboard as indicated in the image above. Note the "short" blue, yellow, green, and red leads (in A22, B23, A24, and B25) in the image above.
 
@@ -84,14 +84,14 @@ Follow these steps to assemble the robot:
 2. Connect the Arduino Nano to an available USB port. It may be necessary to install a serial driver for the COM port used by the Arduino.
 3. Download the sketch from [here](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/arduino/arduinobot.ino). Open the sketch in the Arduino IDE and upload to the Arduino Nano.
 
-> NOTE: The referenced sketch requires the DRV8833 Motor Controller Library available from [here](https://sourceforge.net/projects/drv8833lib/files/current/).
+> NOTE: The referenced sketch requires the DRV8833 Motor Controller Library available from [here](https://sourceforge.net/projects/drv8833lib/files/current/). See https://www.arduino.cc/en/guide/libraries for instructions on how to install libraries in the Arduino IDE.
 
 ## Operate
 
-Install the four AA batteries into the battery holders. The short lead in A15 can then be connected to the 5v power rail to power on the robot.
+Install the four AA batteries into the battery holders. The short lead in A15 can then be connected to the 5v power rail to power on the robot to watch the robot go through a set of coordinated movements.
 
-Watch the robot go through a set of coordinated movements. The robot is intended to be re-programmed by the user. Try changing some of the variables in the initial sketch and re-uploading to see how the changes alter how the robot moves.
+The robot is intended to be re-programmed by the user. Try changing some of the variables in the initial sketch and re-uploading to see how the changes alter how the robot moves.
 
 ## Expand
 
-There are multiple pins available on the Arduino to add sensors, switches, and even additional motor controllers and motors. The body and chassis have holes evenly spaced in a grid to allow for the attachment of additional body components and brackets. Create new components and more sophisticated programming, then share your creations with the rest of the world!
+There are multiple pins available on the Arduino to add sensors, switches, and even additional motor controllers and motors. The body and chassis have holes evenly spaced in a grid to allow for the attachment of additional body components and brackets. The gearbox can be reconfigured, and the chassis and body can be replaced as well. Add new components, create new parts, or add more sophisticated programming, then share your creations with the rest of the world!
