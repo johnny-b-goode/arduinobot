@@ -17,21 +17,19 @@ ArduinoBot is a low-cost robot created with an emphasis on providing an entry po
 | 4        | generic     | Flat Head Screws with Hex Nuts for Chassis              |
 | 4        | generic     | Flat Head Screws with Hex Nuts for Battery Holders      |
 
-## Chassis
+## Print
 
-Print and post-process the chassis available from [![Youmagine](https://www.youmagine.com/assets/youmagine-logo-915d584cc2ad9c0577a00ec2e6359d8587c4d15c5d5ce8c34c464b564eacb78b.svg)](https://www.youmagine.com)
+Print and post-process the chassis and body available from [![Youmagine](https://www.youmagine.com/assets/youmagine-logo-915d584cc2ad9c0577a00ec2e6359d8587c4d15c5d5ce8c34c464b564eacb78b.svg)](https://www.youmagine.com/designs/arduinobot)
 
-## Body
-
-Print and post-process the body available from 
-
-## Assembly
+## Assemble
 
 Do some things and stuff.
 
+![Screenshot](https://github.com/johnny-b-goode/arduinobot/raw/main/rsrc/breadboard.jpg)
+
 ## Program
 
-Download the sketch from here.
+Download the sketch from [here](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/arduino/arduinobot.ino).
 
-> Note that this requires the DRV8833 Motor Controller Library available from [![Sourceforge](https://sourceforge.net/sflogo.php?type=14&group_id=274282)](https://sourceforge.net/projects/drv8833lib/files/current/)
+> NOTE: The referenced sketch requires the DRV8833 Motor Controller Library available from [![Sourceforge](https://sourceforge.net/sflogo.php?type=14&group_id=274282)](https://sourceforge.net/projects/drv8833lib/files/current/)
 
