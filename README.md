@@ -14,22 +14,75 @@ ArduinoBot is a low-cost robot created with an emphasis on providing an entry po
 | 2        | generic     | 2 x AA Battery Holder                                   |
 | 1        | generic     | 400 Point Solderless Breadboard                         |
 | 22       | generic     | Jumper Wires                                            |
+| 4        | generic     | 22 Gauge Wires                                          |
 | 4        | generic     | Flat Head Screws with Hex Nuts for Chassis              |
 | 4        | generic     | Flat Head Screws with Hex Nuts for Battery Holders      |
 
+The wires and jumpers are not intended to be anything specific. The ones I used came from a (I think Elenco) jumper kit, but any sufficiently small solid core wire cut into jumpers should do.
+
+The screws and hex nuts are not intended to be any particular size. The Tamiya Twin-Motor Gear Box includes two 3mm x 8mm machine screws that are a bit too short, and the wrong head size. I used #4 - 40 x 1/2" to connect the body to the chassis and gearbox, and #4 - 40 x 5/16" screws to connect the battery holders to the body.
+
+## Tools
+
+| Quantity                                |
+| --------                                |
+| Rotary Tool (Dremel) with Cut-Off Wheel |
+| 25W Soldering Iron                      |
+| Solder                                  |
+| Wire Strippers                          |
+| #1 Phillips Screwdriver                 |
+| Pliers or Tweezers                      |
+| #31 Drill Bit                           |
+| #44 Drill Bit                           |
+| 1/8" Drill Bit                          |
+| 82° Countersink                         |
+
 ## Print
 
-Print and post-process the chassis and body available from [![Youmagine](https://www.youmagine.com/assets/youmagine-logo-915d584cc2ad9c0577a00ec2e6359d8587c4d15c5d5ce8c34c464b564eacb78b.svg)](https://www.youmagine.com/designs/arduinobot)
+1. Print and post-process the chassis and body available from [here](https://www.youmagine.com/designs/arduinobot).
+2. Chase the the holes in the body with a 1/8" drill bit.
+3. Chase the holes in the top and front of the chassis with the 1/8" drill bit.
+4. Chase the front axle hole and rear hex-shaft holes with the #31 drill bit.
+5. Chase the holes for the idler wheels with the #44 drill bit.
+6. (Optional) Chase the countersunk holes with the countersink
 
 ## Assemble
 
-Do some things and stuff.
+Follow these steps to assemble the robot:
 
-![Screenshot](https://github.com/johnny-b-goode/arduinobot/raw/main/rsrc/breadboard.jpg)
+1. Cut two of the hex shafts included in the Twin-Motor Gear Box set down by 0.120"
+2. Cut down one of the round front axles included in the Tamiya Track and Wheel Set
+3. Assemble the Twin-Motor Gear Box in the A configuration
+4. Strip approximately 1/8" from one ond of the 22 gauge wires and approximately 3/16" from the other end
+5. Tin the stripped ends of the 22 gauge wires
+6. Solder the 1/8" ends of the four 22 gauge wires to the motors in the Twin-Motor Gear Box
+7. Solder the male headers (included) to the 5v regulator
+8. Solder the male headers (included) to the motor controller
+9. Put the Twin-Motor Gear Box into the rear of the chassis from the bottom. The tabs on the gearbox should be flat against the bottom of the chassis. Note that the "trestles" that the wheels mount to will need to be slightly flexed outward to install the gearbox. This should be done carefully to prevent breaking the chassis.
+10. Insert two of the longer screws through the countersunk holes in the rear of the body, through the matching holes in the chassis, and through the tabs in the Twin-Motor Gear Box. Install the hex nuts onto the screws, but do not tighten.
+11. Install the remaining two longer screws through the countersunk holes in the middle-front of the body, through the matching holes in the chassis. Install the hex nuts onto the screws, and tighten all four hex nuts.
+12. Feed the wires soldered to the motors up through holes in the first two rows or front of the chassis and body. 
+13. Install the two battery holders on the side of the body using the shorter screws and matching hex nuts. The leads in the battery holders should be run through the holes in the sides of the body toward the front. Note that depending on the screws used to attach the battery holders the countersunk holes in the battery holders may need to be cut deeper. If battery holders without countersunk mounting holes are used, they will need to be countersunk.
+14. Install the jumpers, Arduino, voltage regulator, and motor controller (in order) in the breadboard as indicated in the image below.
+![breadboard](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/rsrc/breadboard.jpg)
+15. Remove the adhesive backing from the breadboard and adhere to the body, lining up the back of the breadboard with the back of the body.
+16. Connect the leads from the battery holders to the breadboard in series supplying 6v to the left-hand rail of the breadboard (supplying the 5v regulator). Note the "short" red and black leads (in I30, J30, and power rail) in the image above.
+17. Connect the leads from the motors to the breadboard as indicated in the image above. Note the "short" blue, yellow, green, and red leads (in A22, B23, A24, and B25) in the image above.
 
 ## Program
 
-Download the sketch from [here](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/arduino/arduinobot.ino).
+1. Download and install the Arduino IDE from https://www.arduino.cc/en/Main.Software.
+2. Connect the Arduino Nano to an available USB port. It may be necessary to install a serial driver for the COM port used by the Arduino.
+3. Download the sketch from [here](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/arduino/arduinobot.ino). Open the sketch in the Arduino IDE and upload to the Arduino Nano.
 
-> NOTE: The referenced sketch requires the DRV8833 Motor Controller Library available from [![Sourceforge](https://sourceforge.net/sflogo.php?type=14&group_id=274282)](https://sourceforge.net/projects/drv8833lib/files/current/)
+> NOTE: The referenced sketch requires the DRV8833 Motor Controller Library available from [here](https://sourceforge.net/projects/drv8833lib/files/current/).
 
+## Operate
+
+Install the four AA batteries into the battery holders. The short lead in A15 can then be connected to the 5v power rail to power on the robot.
+
+Watch the robot go through a set of coordinated movements. The robot is intended to be re-programmed by the user. Try changing some of the variables in the initial sketch and re-uploading to see how the changes alter how the robot moves.
+
+## Expand
+
+There are multiple pins available on the Arduino to add sensors, switches, and even additional motor controllers and motors. The body and chassis have holes evenly spaced in a grid to allow for the attachment of additional body components and brackets.
