@@ -18,13 +18,13 @@ ArduinoBot is a low-cost robot created with an emphasis on providing an entry po
 | 4        | generic     | Flat Head Screws with Hex Nuts for Chassis              |
 | 4        | generic     | Flat Head Screws with Hex Nuts for Battery Holders      |
 
-The wires and jumpers are not intended to be anything specific. The ones I used came from a (I think Elenco) jumper kit, but any sufficiently small solid core wire cut into jumpers should do.
+The wires and jumpers are not intended to be specific components. The ones I used came from a (I think Elenco) jumper kit, but any sufficiently small solid core wire cut into jumpers should do.
 
-The screws and hex nuts are not intended to be any particular size. The Tamiya Twin-Motor Gear Box includes two 3mm x 8mm machine screws that are a bit too short, and the wrong head size. I used #4 - 40 x 1/2" to connect the body to the chassis and gearbox, and #4 - 40 x 5/16" screws to connect the battery holders to the body.
+The screws and hex nuts are not intended to be any particular size. The Tamiya Twin-Motor Gear Box includes two 3mm x 8mm machine screws that are a bit too short, and with the wrong head. I used #4 - 40 x 1/2" to connect the body to the chassis and gearbox, and #4 - 40 x 5/16" screws to connect the battery holders to the body.
 
 ## Tools
 
-| Quantity                                |
+| Tool                                    |
 | --------                                |
 | Rotary Tool (Dremel) with Cut-Off Wheel |
 | 25W Soldering Iron                      |
@@ -64,7 +64,9 @@ Follow these steps to assemble the robot:
 12. Feed the wires soldered to the motors up through holes in the first two rows or front of the chassis and body. 
 13. Install the two battery holders on the side of the body using the shorter screws and matching hex nuts. The leads in the battery holders should be run through the holes in the sides of the body toward the front. Note that depending on the screws used to attach the battery holders the countersunk holes in the battery holders may need to be cut deeper. If battery holders without countersunk mounting holes are used, they will need to be countersunk.
 14. Install the jumpers, Arduino, voltage regulator, and motor controller (in order) in the breadboard as indicated in the image below.
+
 ![breadboard](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/rsrc/breadboard.jpg)
+
 15. Remove the adhesive backing from the breadboard and adhere to the body, lining up the back of the breadboard with the back of the body.
 16. Connect the leads from the battery holders to the breadboard in series supplying 6v to the left-hand rail of the breadboard (supplying the 5v regulator). Note the "short" red and black leads (in I30, J30, and power rail) in the image above.
 17. Connect the leads from the motors to the breadboard as indicated in the image above. Note the "short" blue, yellow, green, and red leads (in A22, B23, A24, and B25) in the image above.
@@ -85,4 +87,4 @@ Watch the robot go through a set of coordinated movements. The robot is intended
 
 ## Expand
 
-There are multiple pins available on the Arduino to add sensors, switches, and even additional motor controllers and motors. The body and chassis have holes evenly spaced in a grid to allow for the attachment of additional body components and brackets.
+There are multiple pins available on the Arduino to add sensors, switches, and even additional motor controllers and motors. The body and chassis have holes evenly spaced in a grid to allow for the attachment of additional body components and brackets. Create new components and more sophisticated programming, then share your creations with the rest of the world!
