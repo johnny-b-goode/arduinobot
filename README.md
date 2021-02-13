@@ -4,19 +4,19 @@ ArduinoBot is a low-cost robot created with an emphasis on providing an entry po
 
 ## Bill of Materials
 
-| Quantity | Part Number | Description                                             |
-| -------- | ------      |------                                                   |
-| 1        | generic     | Arduino Nano (328), or clone                            |
-| 1        | 2130        | Pololu DRV8833 Dual Motor Controller                    |
-| 1        | 2836        | Pololu 5v Step-Up / Step-Down Voltage Regulator S9V11F5 |
-| 1        | 70100       | Tamiya Track and Wheel Set                              |
-| 1        | 70097       | Tamiya Twin-Motor Gear Box                              |
-| 2        | generic     | 2 x AA Battery Holder                                   |
-| 1        | generic     | 400 Point Solderless Breadboard                         |
-| 22       | generic     | Jumper Wires                                            |
-| 4        | generic     | 22 Gauge Wires                                          |
-| 4        | generic     | Flat Head Screws with Hex Nuts for Chassis              |
-| 4        | generic     | Flat Head Screws with Hex Nuts for Battery Holders      |
+| Quantity | Part Number | Description                                                                                                                                          |
+| -------- | ------      |------                                                                                                                                                |
+| 1        | generic     | [Arduino Nano (328) Clone](https://www.robotshop.com/en/elecrow-nano-328-microcontroller.html)                                                       |
+| 1        | 2130        | [Pololu DRV8833 Dual Motor Controller](https://www.robotshop.com/en/pololu-drv8833-motor-controller-2130.html)                                       |
+| 1        | 2836        | [Pololu 5v Step-Up / Step-Down Voltage Regulator S9V11F5](https://www.robotshop.com/en/pololu-5v-step-up---step-down-voltage-regulator-s9v11f5.html) |
+| 1        | 70100       | [Tamiya Track and Wheel Set](https://www.robotshop.com/en/tamiya-track-and-wheel-set.html)                                                           |
+| 1        | 70097       | [Tamiya Twin-Motor Gear Box](https://www.robotshop.com/en/tamiya-twin-motor-gearbox.html)                                                            |
+| 2        | generic     | [2 x AA Battery Holder](https://www.robotshop.com/en/2-aa-battery-holder.html)                                                                       |
+| 1        | generic     | [400 Point Solderless Breadboard](https://www.robotshop.com/en/400-tie-point-solderless-interlocking-breadboard.html)                                |
+| 22       | generic     | Jumper Wires                                                                                                                                         |
+| 4        | generic     | 22 Gauge Wires                                                                                                                                       |
+| 4        | generic     | Flat Head Screws with Hex Nuts for Chassis                                                                                                           |
+| 4        | generic     | Flat Head Screws with Hex Nuts for Battery Holders                                                                                                   |
 
 The wires and jumpers are not intended to be specific components. The ones I used came from a (I think Elenco) jumper kit, but any sufficiently small solid core wire cut into jumpers should do.
 
@@ -51,25 +51,32 @@ The screws and hex nuts are not intended to be any particular size. The Tamiya T
 Follow these steps to assemble the robot:
 
 1. Cut two of the hex shafts included in the Twin-Motor Gear Box set down by 0.120"
-2. Cut down one of the round front axles included in the Tamiya Track and Wheel Set
-3. Assemble the Twin-Motor Gear Box in the A configuration
+2. Cut down one of the round axles included in the Tamiya Track and Wheel Set
+3. Assemble the Twin-Motor Gear Box in the A configuration, but leaving the two hex shafts and gears out.
 4. Strip approximately 1/8" from one ond of the 22 gauge wires and approximately 3/16" from the other end
 5. Tin the stripped ends of the 22 gauge wires
 6. Solder the 1/8" ends of the four 22 gauge wires to the motors in the Twin-Motor Gear Box
-7. Solder the male headers (included) to the 5v regulator
+7. Solder the 90° male headers (included) to the 5v regulator
 8. Solder the male headers (included) to the motor controller
-9. Put the Twin-Motor Gear Box into the rear of the chassis from the bottom. The tabs on the gearbox should be flat against the bottom of the chassis. Note that the "trestles" that the wheels mount to will need to be slightly flexed outward to install the gearbox. This should be done carefully to prevent breaking the chassis.
+9. Insert the Twin-Motor Gear Box into the rear of the chassis from the bottom. The tabs on the gearbox should be flat against the bottom of the chassis. Note that the "trestles" that the wheels mount to will need to be slightly flexed outward to install the gearbox. This should be done carefully to prevent breaking the chassis.
 10. Insert two of the longer screws through the countersunk holes in the rear of the body, through the matching holes in the chassis, and through the tabs in the Twin-Motor Gear Box. Install the hex nuts onto the screws, but do not tighten.
-11. Install the remaining two longer screws through the countersunk holes in the middle-front of the body, through the matching holes in the chassis. Install the hex nuts onto the screws, and tighten all four hex nuts.
-12. Feed the wires soldered to the motors up through holes in the first two rows or front of the chassis and body. 
-13. Install the two battery holders on the side of the body using the shorter screws and matching hex nuts. The leads in the battery holders should be run through the holes in the sides of the body toward the front. Note that depending on the screws used to attach the battery holders the countersunk holes in the battery holders may need to be cut deeper. If battery holders without countersunk mounting holes are used, they will need to be countersunk.
-14. Install the jumpers, Arduino, voltage regulator, and motor controller (in order) in the breadboard as indicated in the image below.
+11. Inert the hex shafts through the holes in the chassis and into the Twin-Motor Gear Box.
+12. Install the remaining two longer screws through the countersunk holes in the middle-front of the body, through the matching holes in the chassis. Install the hex nuts onto the screws, and tighten all four hex nuts.
+13. Feed the wires soldered to the motors up through holes in the first two rows or front of the chassis and body. 
+14. Install the two battery holders on the side of the body using the shorter screws and matching hex nuts. The leads in the battery holders should be run through the holes in the sides of the body toward the front. Note that depending on the screws used to attach the battery holders the countersunk holes in the battery holders may need to be cut deeper. If battery holders without countersunk mounting holes are used, they will need to be countersunk.
+15. Assemble each of the longest piece of track (30 link) from the Track and Wheel Set together with two of the middle-length pieces of track (10 link).
+16. Remove both the drive wheels, the large idler wheels, six of the road wheels, and two of the  from the sprue of the Track and Wheel Set.
+17. Install the drive wheels onto the hex shafts.
+18. Install one of the wheel retainers and large idler wheels onto the round axle that was cut down in step two.
+19. Insert the round axle into the front axle hole of the chassis, then install the remaining large idler wheel and wheel retainer on the front axle.
+20. Use six of the self-tapping shoulder screws to install three of the road wheels onto each side of the chassis, being careful not to over-tighten the screws.
+21. Install the jumpers, Arduino, voltage regulator, and motor controller (in order) in the breadboard as indicated in the image below.
 
 ![breadboard](https://raw.githubusercontent.com/johnny-b-goode/arduinobot/main/rsrc/breadboard.jpg)
 
-15. Remove the adhesive backing from the breadboard and adhere to the body, lining up the back of the breadboard with the back of the body.
-16. Connect the leads from the battery holders to the breadboard in series supplying 6v to the left-hand rail of the breadboard (supplying the 5v regulator). Note the "short" red and black leads (in I30, J30, and power rail) in the image above.
-17. Connect the leads from the motors to the breadboard as indicated in the image above. Note the "short" blue, yellow, green, and red leads (in A22, B23, A24, and B25) in the image above.
+22. Remove the adhesive backing from the breadboard and adhere to the body, lining up the back of the breadboard with the back of the body.
+23. Connect the leads from the battery holders to the breadboard in series supplying 6v to the left-hand rail of the breadboard (supplying the 5v regulator). Note the "short" red and black leads (in I30, J30, and power rail) in the image above.
+24. Connect the leads from the motors to the breadboard as indicated in the image above. Note the "short" blue, yellow, green, and red leads (in A22, B23, A24, and B25) in the image above.
 
 ## Program
 
